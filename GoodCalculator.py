@@ -1,25 +1,30 @@
 while True:
-    h= str(input("enter a to exit and any letter to countinue"))
-    a=float(input("Enter first digit: "))
-    h= str(input("enter a to exit and any letter to countinue"))
-    op=input("Enter operator (+, -, *, /): ")
-    h= str(input("enter a to exit and any letter to countinue"))
-    b= float(input("Enter second digit: "))
-    h= str(input("enter a to exit and any letter to countinue"))
+    a=input("Enter first digit or e to exit: ")
+    if a=='e':
+        break
+    op=input("Enter operator (+, -, *, /) or e to exit: ")
+    if op=="e":
+        break
+    b=input("Enter second digit or e to exit: ")
+    if b=="e":
+        break
+
+    h=float(a)
+    i=float(b)
 
     if op == "+":
-        c=a+b
+        c=h+i
         print(c)
     elif op == "-":
-        d=a-b
+        d=h-i
         print(d)
     elif op == "*":
-        e=a*b
+        e=h*i
         print(e)
     elif op == "/":
-        if b == 0:
+        if i == 0:
             print ("oh no")
-        f=a/b
+        f=h/i
         print(f)
     g= float(input("would you like to continue? click 1 for yes and 0 for no"))
     if g==1:
@@ -28,6 +33,4 @@ while True:
         break
     else:
         print("invalid")
-    if h=="a":
-        break
-    
+print("thank you for your business")
